@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NexoDrive</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/script.js" defer></script>
+</head>
+<body>
+  <header class="logo">
+  <img src="/unnamed.png" alt="NexoDrive" height="48">
+</header>
+
+
+  <section>
+    <h3>Subir archivo</h3>
+    <form id="upForm">
+      <p>Nombre quien sube:
+        <input id="uploader" name="uploader" type="text" placeholder="Ej: Ana Pérez">
+      </p>
+      <input id="f" name="file" type="file" required>
+      <button id="up" type="submit">Subir</button>
+      <span id="msg" class="msg"></span>
+    </form>
+
+    <div id="upState" hidden>
+      <div class="spinner"></div>
+      <progress id="progBar" max="100" value="0"></progress>
+      <span id="progPct">0%</span>
+      <span id="upMsg">Subiendo… no cierres esta página.</span>
+    </div>
+  </section>
+
+  <section>
+    <h3>Archivos</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th><th>Tamaño</th><th>Fecha</th><th>Subido por</th><th>Acción</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </section>
+</body>
+</html>
